@@ -30,6 +30,7 @@
     "fix:scss": "make fix-scss",
     "fix:ts": "make fix-ts",
     "test": "make test",
+    "build": "make build",
     "e2e": "concurrently -kill-others --success first \"npm run start:e2e\" \"wait-on http://localhost:8080 && npx cypress run\"",
     "e2e:headed": "concurrently -kill-others --success first \"npm run start:e2e\" \"wait-on http://localhost:8080 && npx cypress run --headed\"",
     "postinstall": "make ensure-version && ngcc",
