@@ -30,7 +30,7 @@
     "fix:scss": "make fix-scss",
     "fix:ts": "make fix-ts",
     "test": "make test",
-    "build": "make build",
+    "build": "env FRONTEND_ONLY=1 make build",
     "install-go": "curl -sL https://go.dev/dl/go1.19.linux-amd64.tar.gz | tar -xzC /usr/local/ && cp /usr/local/go/bin/go /usr/bin/go",
     "preinstall": "yarn install-go",
     "e2e": "concurrently -kill-others --success first \"npm run start:e2e\" \"wait-on http://localhost:8080 && npx cypress run\"",
